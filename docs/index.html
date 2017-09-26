@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Aria progressbar demo</title>
+  <link rel="stylesheet" href="aria-progressbar.css" />
+  <style>
+    body {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 80px;
+      font-family: sans-serif;
+    }
+
+    .btn {
+      display: block;
+      max-width: 300px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #6216c9;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #510cad;
+      margin: 40px auto;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background-color: #510cad;
+    }
+
+    .btn:avtive {
+      background-color: #6216c9;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="aria-progressbar.js"></script>
+  <script>
+    $(document).ready(function() {
+      'use strict';
+      var pgb = $('#pgb');
+      var i = 0;
+      pgb.ariaProgressbar({
+        progressClass: 'progress progress_streamtext'
+      });
+
+
+      var int = setInterval(function() {
+        if (i < 100) {
+          i = i + 1;
+          pgb.ariaProgressbar('update', i);
+        } else {
+          clearInterval(int);
+          pgb.ariaProgressbar('destroy');
+        }
+      }, 50);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="pgb">
+  </div>
+</body>
+
+</html>
