@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -49,13 +49,12 @@
 
       var int = setInterval(function() {
         if (i < 100) {
-          i = i + 1;
+          i = i + 20;
           pgb.ariaProgressbar('update', i);
         } else {
           clearInterval(int);
-          pgb.ariaProgressbar('destroy');
         }
-      }, 50);
+      }, 200);
     });
   </script>
 </head>

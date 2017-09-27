@@ -14,6 +14,9 @@
   border-radius: 0.3rem;
   display: block;
   height: 0.6rem;
+  -webkit-transition: 0.1s width ease;
+  -o-transition: 0.1s width ease;
+  transition: 0.1s width ease;
 }
 
 .progress_streampercent:after {
