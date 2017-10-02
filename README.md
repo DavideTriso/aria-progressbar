@@ -2,7 +2,7 @@
 
 ## About
 
-simple jQuery plugin for user-friendly and accessible progressbars. [Go to demo page](https://davidetriso.github.io/aria-progressbar/).
+simple jQuery plugin for user-friendly and accessible progressbars. [Go to demo page](https://davidetriso.github.io/aria-progressbar/) or [check on npm](https://www.npmjs.com/package/t-aria-progressbar).
 
 * User-friendly and accessible
 * Less than 2KB (minified).
@@ -24,6 +24,18 @@ progressBarClass | progress__bar | string | The class of the progressbars.
 minVal | 0 | int | The minimum value of the progressbar (task % = 0).
 maxVal | 100 | int | The maximum value of the progressbar (task % = 100% - task completed!).
 textLabel | {X} percent completed | string | String used to generate a user-readable version of the progress value (see [https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext](https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext) for more informatioins) (`{X}` will be automatically replaced with the current progress value).
+destroyDelay | 300 | int >= 0 | Interval in ms: Delay the call of `destroy()` when task is complete and progress is 100% (the time is needed to complete the CSS transition of the progressbar). 
+destroyFadeOutSpeed | 300 | int >= 0 | Speed of jQuery fade-out animation, performed when `destroy()` is called, before removing the element from DOM.
+
+## Installation
+
+Download the package from **GitHub** and get the compiled files from the `dist` folder.
+
+The plugin is also available on **npm**:
+```
+npm install t-aria-progressbar
+```
+
 
 ## Usage
 
@@ -45,7 +57,7 @@ $('#progress-container').ariaProgressbar({
 
 ## Methods
 
-The plugin supports following methods: update, destroy.
+The plugin supports following methods: `update`, `destroy`.
 
 ### Update:
 
@@ -59,8 +71,8 @@ $('#my-progressbar').ariaProgressbar('update', 10);
 
 ### Destroy
 
-The destroy method removes the progressbar from DOM. The method is automatically called from the widget, when the progress value passed to `update` is equal to `maxVal`.
-If, for any reason, the widget must be removed before the task is completed, then use the `destroy` method:
+The destroy method removes the progressbar from DOM. The method is **automatically called from the widget**, when the progress value passed to `update` is equal to `maxVal`.
+If, for any reason, the widget must be removed before the task is completed (e.g. user interrupts process), or in the case the progress value is indetermined, then use the `destroy` method to remove the widget:
 
 ```javascript
 $('#my-progressbar').ariaProgressbar('destroy');

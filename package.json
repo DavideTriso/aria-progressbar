@@ -1,6 +1,7 @@
 {
-  "name": "aria-progressbar",
+  "name": "t-aria-progressbar",
   "license": "MIT",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/davidetriso/aria-progressbar.git"
@@ -14,8 +15,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.1.1",
     "gulp-uglify": "^3.0.0",
-    "require-dir": "^0.3.2",
-    "t-css-framework": ""
+    "require-dir": "^0.3.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "t-css-framework": "^0.2.4"
+  }
 }

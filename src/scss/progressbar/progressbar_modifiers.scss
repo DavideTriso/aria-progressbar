@@ -1,0 +1,36 @@
+//----------------
+//MODIFIERS
+//----------------
+//
+//Stream valuetext or valuenow using CSS content property
+.progress_streampercent {
+    &:after {
+        content: attr(data-progress)'%';
+        @extend %color-black;
+        //@extend %r-fs_5; //set font size
+        @extend %left-50;
+        @extend %position-absolute;
+        @extend %top-50;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.progress_streamtext {
+    &:after {
+        content: attr(data-progresstext);
+        @extend %color-black;
+        //@extend %r-fs_5; //set font size
+        @extend %left-50;
+        @extend %position-absolute;
+        @extend %top-50;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+//
+//SPINNER
+.progress_spinner {
+    //Not provided with the plugin,
+    //One simple free CSS-only solution is provided at https://github.com/DavideTriso/animated-buttons/tree/master/load-spinner-1
+}

@@ -1,18 +1,82 @@
+.progress, .progress__bar {
+  border-style: solid;
+}
+
 .progress {
-  border: 0.05rem solid #828282;
-  border-radius: 0.3rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+}
+
+.progress_streampercent:after, .progress_streamtext:after {
+  color: #000;
+}
+
+.progress, .progress__bar {
   display: block;
-  height: 0.6rem;
+}
+
+.progress_streampercent:after, .progress_streamtext:after {
+  left: 50%;
+}
+
+.progress_streampercent:after, .progress_streamtext:after {
+  position: absolute;
+}
+
+.progress {
   position: relative;
-  width: 100%;
+}
+
+.progress_streampercent:after, .progress_streamtext:after {
+  top: 50%;
 }
 
 .progress__bar {
-  background-color: #c3c3c3;
-  border-radius: 0.3rem;
-  display: block;
+  width: 0;
+}
+
+.progress {
+  width: 100%;
+}
+
+/*
+.demo {
+    background-color: red;
+    @include mqMin(w4) {
+	    background-color: blue;
+	}
+}
+*/
+/*
+.demo {
+    background-color: red;
+    @include mqMax(w4) {
+	    background-color: blue;
+	}
+}
+*/
+/*
+.demo {
+    background-color: red;
+    @include mqRange(w2, w4) {
+	    background-color: blue;
+	}
+}
+*/
+/*
+@include generateResponsiveGutter($guttersBreakpointsMap, $smallGuttersList, $containerClassName, $rowClassName, $columnClassName, $smallGutterModifierName);
+@include generateResponsiveGutter($guttersBreakpointsMap, $largeGuttersList, $containerClassName, $rowClassName, $columnClassName, $largeGutterModifierName);*/
+.progress {
+  border-color: #aaa;
+  border-radius: 0.35rem;
+  border-width: 0.05rem;
+  height: 0.6rem;
+}
+
+.progress__bar {
+  background-color: #ccc;
+  border-radius: 0.35rem;
+  border-width: 0;
   height: 0.6rem;
   -webkit-transition: 0.1s width ease;
   -o-transition: 0.1s width ease;
@@ -21,12 +85,6 @@
 
 .progress_streampercent:after {
   content: attr(data-progress) "%";
-  color: #000;
-  font-size: 0.6rem;
-  font-family: sans-serif;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -34,12 +92,6 @@
 
 .progress_streamtext:after {
   content: attr(data-progresstext);
-  color: #000;
-  font-size: 0.6rem;
-  font-family: sans-serif;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
