@@ -24,7 +24,7 @@ progressBarClass | progress__bar | string | The class of the progressbars.
 minVal | 0 | int | The minimum value of the progressbar (task % = 0).
 maxVal | 100 | int | The maximum value of the progressbar (task % = 100% - task completed!).
 textLabel | {X} percent completed | string | String used to generate a user-readable version of the progress value (see [https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext](https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext) for more informatioins) (`{X}` will be automatically replaced with the current progress value).
-destroyDelay | 300 | int >= 0 | Interval in ms: Delay the call of `destroy()` when task is complete and progress is 100% (the time is needed to complete the CSS transition of the progressbar). 
+destroyDelay | 300 | int >= 0 | Interval in ms: Delay the call of `destroy()` when task is complete and progress is 100% (the time is needed to complete the CSS transition of the progressbar).
 destroyFadeOutSpeed | 300 | int >= 0 | Speed of jQuery fade-out animation, performed when `destroy()` is called, before removing the element from DOM.
 
 ## Installation
@@ -64,7 +64,7 @@ The plugin supports following methods: `update`, `destroy`.
 To update a progressbar call `ariaProgressbar` and pass **'update'** as first parameter and the value indicating the current task progress as second parameter.
 If the progress value  is indeterminate, simply do not perform any call to the `update` method. By not calling `update` the attribute `aria-valuenow` will be omitted and the widget will conform the requirements of the WAI-ARIA specification.
 For more infos check (https://www.w3.org/TR/wai-aria/roles#progressbar)[https://www.w3.org/TR/wai-aria/roles#progressbar]).
- 
+
 ```javascript
 $('#my-progressbar').ariaProgressbar('update', 10);
 ```
