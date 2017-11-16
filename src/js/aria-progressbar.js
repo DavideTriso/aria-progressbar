@@ -84,7 +84,7 @@ SOFTWARE.
 
       //add attributes
       self.progressbar
-        .attr(a.aVMin, settings.minVal)
+        .attr(a.aVMin, '0')
         .attr(a.aVMax, settings.maxVal);
 
       //trigger custom event on window for authors to listen for
@@ -107,7 +107,7 @@ SOFTWARE.
 
       self.value = value;
       self.valueText = settings.textLabel.replace('{X}', value);
-      self.valuePercent = (settings.maxVal - settings.minVal) * value / 100;
+      self.valuePercent = (value * 100.0)/settings.maxVal;
 
       //update valuenow attribute and with of bars
       self.progressbar
@@ -175,7 +175,6 @@ SOFTWARE.
   $.fn[pluginName].defaultSettings = {
     progressClass: 'progress',
     progressBarClass: 'progress__bar',
-    minVal: 0,
     maxVal: 100,
     textLabel: '{X} percent completed',
     destroyDelay: 300,

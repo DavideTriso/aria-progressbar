@@ -21,7 +21,6 @@ Name | Default | Type | Description
 -----|---------|------|-------------
 progressClass | progress | string | The class of the progressbar wrapper.
 progressBarClass | progress__bar | string | The class of the progressbars.
-minVal | 0 | int | The minimum value of the progressbar (task % = 0).
 maxVal | 100 | int | The maximum value of the progressbar (task % = 100% - task completed!).
 textLabel | {X} percent completed | string | String used to generate a user-readable version of the progress value (see [https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext](https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext) for more informatioins) (`{X}` will be automatically replaced with the current progress value).
 destroyDelay | 300 | int >= 0 | Interval in ms: Delay the call of `destroy()` when task is complete and progress is 100% (the time is needed to complete the CSS transition of the progressbar).
