@@ -1,9 +1,13 @@
-@import '../../node_modules/t-css-framework/settings/import';
-@import '../../node_modules/t-css-framework/functions/import';
-@import '../../node_modules/t-css-framework/css-placeholders/import';
-@import '../../node_modules/t-css-framework/responsive-helpers/import';
-@import '../../node_modules/t-css-framework/ui-helpers/import';
-@import '../../node_modules/t-css-framework/grid/import';
-@import "progressbar/progressbar";
-@import "progressbar/progressbar__elements";
-@import "progressbar/progressbar_modifiers";
+//import t-css-framework modules
+@import "../../node_modules/t-css-framework/src/settings/settings.import";
+@import "../../node_modules/t-css-framework/src/functions/functions.import";
+@import "../../node_modules/t-css-framework/src/helpers/helpers.import";
+
+//import progressbar modules
+@import "progressbar/progress.variables";
+@import "progressbar/progress";
+@import "progressbar/progress__elements";
+
+//modifiers
+@import "progressbar/modifiers/progress_streampercent";
+@import "progressbar/modifiers/progress_streamtext";

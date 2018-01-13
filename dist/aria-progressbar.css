@@ -1,44 +1,3 @@
-.progress, .progress__bar {
-  border-style: solid;
-}
-
-.progress {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.progress_streampercent:after, .progress_streamtext:after {
-  color: #000;
-}
-
-.progress, .progress__bar {
-  display: block;
-}
-
-.progress_streampercent:after, .progress_streamtext:after {
-  left: 50%;
-}
-
-.progress_streampercent:after, .progress_streamtext:after {
-  position: absolute;
-}
-
-.progress {
-  position: relative;
-}
-
-.progress_streampercent:after, .progress_streamtext:after {
-  top: 50%;
-}
-
-.progress__bar {
-  width: 0;
-}
-
-.progress {
-  width: 100%;
-}
-
 /*
 .demo {
     background-color: red;
@@ -63,21 +22,25 @@
 	}
 }
 */
-/*
-@include generateResponsiveGutter($guttersBreakpointsMap, $smallGuttersList, $containerClassName, $rowClassName, $columnClassName, $smallGutterModifierName);
-@include generateResponsiveGutter($guttersBreakpointsMap, $largeGuttersList, $containerClassName, $rowClassName, $columnClassName, $largeGutterModifierName);*/
 .progress {
   border-color: #aaa;
-  border-radius: 0.35rem;
+  border-radius: 0.4rem;
+  border-style: solid;
   border-width: 0.05rem;
-  height: 0.6rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: block;
+  height: 0.8rem;
+  width: 100%;
+  position: relative;
 }
 
 .progress__bar {
   background-color: #ccc;
-  border-radius: 0.35rem;
-  border-width: 0;
-  height: 0.6rem;
+  border-radius: 0.4rem;
+  display: block;
+  height: 0.8rem;
+  width: 0;
   -webkit-transition: 0.1s width ease;
   -o-transition: 0.1s width ease;
   transition: 0.1s width ease;
@@ -85,6 +48,11 @@
 
 .progress_streampercent:after {
   content: attr(data-progress) "%";
+  font-size: 0.8rem;
+  color: #000;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -92,6 +60,11 @@
 
 .progress_streamtext:after {
   content: attr(data-progresstext);
+  color: #000;
+  font-size: 0.8rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

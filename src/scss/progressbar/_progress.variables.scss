@@ -1,0 +1,50 @@
+//BLOCK
+$progress--border: (
+  borderColor : #aaa,
+  borderStyle : solid,
+  borderWidth : 0.05rem,
+  borderRadius: 0.4rem
+)
+!default;
+
+$progress--sizes: (
+  height: 0.8rem,
+  width : 100%
+)
+!default;
+//modifiers
+//streampercent
+$progress_streampercent--text: (
+  color: #000
+)
+!default;
+$progress_streampercent--font: (
+  fontSize: 0.8rem
+)
+!default;
+
+//streamtext
+$progress_streamtext--text: (
+  color: #000
+)
+!default;
+$progress_streamtext--font: (
+  fontSize: 0.8rem
+)
+!default;
+
+//ELEMENTS
+//bar
+$progress__bar--background: (
+  backgroundColor: #ccc
+)
+!default;
+$progress__bar--border: (
+  borderRadius: 0.4rem,
+)
+!default;
+$progress__bar--sizes: (
+  height: 0.8rem,
+  width : 0
+)
+!default;

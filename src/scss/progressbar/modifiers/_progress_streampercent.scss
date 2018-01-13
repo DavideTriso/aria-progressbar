@@ -1,0 +1,13 @@
+//Stream valuenow using CSS content property
+
+.progress_streampercent {
+  &:after {
+    content  : attr(data-progress)'%';
+    @include font($progress_streampercent--font);
+    @include text($progress_streampercent--text);
+    left     : 50%;
+    position : absolute;
+    top      : 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,11 @@
+.progress_streamtext {
+  &:after {
+    content  : attr(data-progresstext);
+    @include text($progress_streamtext--text);
+    @include font($progress_streamtext--font);
+    left     : 50%;
+    position : absolute;
+    top      : 50%;
+    transform: translate(-50%, -50%);
+  }
+}

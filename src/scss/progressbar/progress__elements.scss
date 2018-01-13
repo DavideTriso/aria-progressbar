@@ -1,0 +1,11 @@
+
+//----------------
+//ELEMENTS
+//----------------
+.progress__bar {
+  @include background($progress__bar--background);
+  @include border($progress__bar--border);
+  display   : block;
+  @include sizes($progress__bar--sizes);
+  transition: 0.1s width ease; // make animation fluid
+}

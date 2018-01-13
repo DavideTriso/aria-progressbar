@@ -1,0 +1,10 @@
+//----------------
+//BLOCK
+//----------------
+.progress {
+  @include border($progress--border);
+  box-sizing: content-box;
+  display   : block;
+  @include sizes($progress--sizes);
+  position  : relative;
+}
