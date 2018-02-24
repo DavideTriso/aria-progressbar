@@ -2,7 +2,7 @@
   "name": "t-aria-progressbar",
   "license": "MIT",
   "description": "HTML, CSS and JS UI-component for user-friendly and accessible progress bars",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/davidetriso/aria-progressbar.git"
@@ -19,6 +19,6 @@
     "require-dir": "^0.3.2"
   },
   "dependencies": {
-    "t-css-framework": "0.15.3"
+    "t-css-framework": "0.18.0"
   }
 }
